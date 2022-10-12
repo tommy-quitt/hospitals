@@ -1,0 +1,118 @@
+[
+    Record {
+      _table: Table {
+        _base: [Base],
+        id: null,
+        name: 'Hospitals',
+        find: [Function (anonymous)],
+        select: [Function: bound ],
+        create: [Function (anonymous)],
+        update: [Function (anonymous)],
+        replace: [Function (anonymous)],
+        destroy: [Function (anonymous)],
+        list: [Function (anonymous)],
+        forEach: [Function (anonymous)]
+      },
+      id: 'rec897236rnQGyt6u',
+      _rawJson: {
+        id: 'rec897236rnQGyt6u',
+        createdTime: '2022-09-23T12:08:21.000Z',
+        fields: [Object]
+      },
+      fields: { Load: 2, HospitalNumber: 2, Name: 'aaa' },
+      save: [Function (anonymous)],
+      patchUpdate: [Function (anonymous)],
+      putUpdate: [Function (anonymous)],
+      destroy: [Function (anonymous)],
+      fetch: [Function (anonymous)],
+      updateFields: [Function (anonymous)],
+      replaceFields: [Function (anonymous)]
+    },
+    Record {
+      _table: Table {
+        _base: [Base],
+        id: null,
+        name: 'Hospitals',
+        find: [Function (anonymous)],
+        select: [Function: bound ],
+        create: [Function (anonymous)],
+        update: [Function (anonymous)],
+        replace: [Function (anonymous)],
+        destroy: [Function (anonymous)],
+        list: [Function (anonymous)],
+        forEach: [Function (anonymous)]
+      },
+      id: 'recCKCAafZv9JUVLW',
+      _rawJson: {
+        id: 'recCKCAafZv9JUVLW',
+        createdTime: '2022-09-29T19:24:36.000Z',
+        fields: [Object]
+      },
+      fields: { Load: 6, HospitalNumber: 1, Name: 'רבין' },
+      save: [Function (anonymous)],
+      patchUpdate: [Function (anonymous)],
+      putUpdate: [Function (anonymous)],
+      destroy: [Function (anonymous)],
+      fetch: [Function (anonymous)],
+      updateFields: [Function (anonymous)],
+      replaceFields: [Function (anonymous)]
+    },
+    Record {
+      _table: Table {
+        _base: [Base],
+        id: null,
+        name: 'Hospitals',
+        find: [Function (anonymous)],
+        select: [Function: bound ],
+        create: [Function (anonymous)],
+        update: [Function (anonymous)],
+        replace: [Function (anonymous)],
+        destroy: [Function (anonymous)],
+        list: [Function (anonymous)],
+        forEach: [Function (anonymous)]
+      },
+      id: 'rechYH0ycDyltPfTt',
+      _rawJson: {
+        id: 'rechYH0ycDyltPfTt',
+        createdTime: '2022-09-23T12:08:21.000Z',
+        fields: [Object]
+      },
+      fields: { Load: 4, HospitalNumber: 3, Name: 'Rabin' },
+      save: [Function (anonymous)],
+      patchUpdate: [Function (anonymous)],
+      putUpdate: [Function (anonymous)],
+      destroy: [Function (anonymous)],
+      fetch: [Function (anonymous)],
+      updateFields: [Function (anonymous)],
+      replaceFields: [Function (anonymous)]
+    },
+    Record {
+      _table: Table {
+        _base: [Base],
+        id: null,
+        name: 'Hospitals',
+        find: [Function (anonymous)],
+        select: [Function: bound ],
+        create: [Function (anonymous)],
+        update: [Function (anonymous)],
+        replace: [Function (anonymous)],
+        destroy: [Function (anonymous)],
+        list: [Function (anonymous)],
+        forEach: [Function (anonymous)]
+      },
+      id: 'recqUyN7BreCrFWws',
+      _rawJson: {
+        id: 'recqUyN7BreCrFWws',
+        createdTime: '2022-09-23T12:08:21.000Z',
+        fields: [Object]
+      },
+      fields: { Load: 6, HospitalNumber: 4, Name: 'Assuta' },
+      save: [Function (anonymous)],
+      patchUpdate: [Function (anonymous)],
+      putUpdate: [Function (anonymous)],
+      destroy: [Function (anonymous)],
+      fetch: [Function (anonymous)],
+      updateFields: [Function (anonymous)],
+      replaceFields: [Function (anonymous)]
+    }
+  ]

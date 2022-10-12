@@ -1,0 +1,74 @@
+const airtable = require('airtable');
+const twilio = require('twilio');
+//const { ConversationList } = require('twilio/lib/rest/conversations/v1/conversation');
+
+//exports.handler = function (context, event, callback) {
+ function func(context, event, callback) {
+   function GetIDfromName(hname) {
+    //const hname.toLowerCase();
+    var retVal = 0;
+    const filterFormula = `({Name} = '${hname}')`;
+    console.log(`GetIdfromName: filterFormula is ${filterFormula}`);
+    const records = await base('HospitalNames')
+      .select({
+        filterByFormula: filterFormula,
+      })
+      .all()
+      .then((records) => {
+        records.forEach((record) => {
+          //console.log('GetIDfromName Retrieved', record.get('Name'));
+          if (record.get('Name') === hname) {
+            //console.log('inside forEach-->if()');
+            retVal = record.get('HospitalNumber');
+            // .then(console.log(`HID: ${retVal}`));
+            console.log(`Hospital ID is ${retVal}`);
+            return retVal;
+          }
+        });
+        console.log('returning -1');
+        return -1;
+      });
+  }
+
+  const base = new airtable({
+    apiKey: context.AIRTABLE_API_KEY,
+  }).base(context.AIRTABLE_BASE_ID);
+
+  var tempID = GetIDfromName(event.hospitalName.toLowerCase());
+  console.log(tempID);
+
+  const hospitalName = event.hospitalName;
+  const LoadfilterFormula = `({Name} = '${hospitalName}')`;
+
+  return base('Hospitals')
+    .select({
+      filterByFormula: LoadfilterFormula,
+    })
+    .all()
+    .then((records) => {
+      // this for each section is redundant now that we use a filter
+      records.forEach((record) => {
+        console.log('Retrieved', record.get('Name'));
+        if (record.get('Name') === event.hospitalName) {
+          callback(null, {
+            message: record.get('Load'),
+          });
+        }
+      });
+      callback(`Sorry, we couldn't find any facts about ${hospitalName}.`);
+    })
+    .catch((error) => {
+      callback(error);
+    });
+}
+
+let con = {
+  AIRTABLE_API_KEY: 'key57zQ6XP5gAXlfn',
+  AIRTABLE_BASE_ID: 'apps1b4CVwiWHWh4U',
+};
+let event = {
+  hospitalName: 'rabin',
+};
+
+console.log(event);
+func(con, event, () => {});
